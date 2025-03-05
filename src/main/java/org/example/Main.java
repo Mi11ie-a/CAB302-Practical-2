@@ -87,11 +87,15 @@ public class Main {
     public static void onSignUp() {
         System.out.print("Enter your username: ");
         Scanner scanner = new Scanner(System.in);
+
         String username = scanner.nextLine();
+
         System.out.print("Enter your password: ");
         String password = scanner.nextLine();
+
         User user = authService.signUp(username, password);
-        // TODO Later: Shows a message based on the result
+
+        System.out.println("Sign up successful! You can now log in with your new account.");
     }
 
     /**
